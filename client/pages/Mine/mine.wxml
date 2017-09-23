@@ -4,7 +4,7 @@
     <text class="userinfo-nickname">{{userInfo.nickName}}</text>
   </view>
   <view class="info_list">
-    <block wx:for="{{userListInfo}}">
+    <navigator wx:for="{{userListInfo}}" bindtap="navigateTo" id="{{item.title}}">
         <view class="weui_cell">
             <view class="weui_cell_hd"><image src="{{item.icon}}"></image></view>
             <view class="weui_cell_bd">
@@ -13,6 +13,6 @@
             <view wx:if="{{item.isunread}}" class="badge">{{item.unreadNum}}</view>
             <view class="with_arrow"></view>
         </view>
-    </block>
+    </navigator>
   </view>
 </view>

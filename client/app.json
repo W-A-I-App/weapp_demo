@@ -1,11 +1,16 @@
 {
   "pages": [
     "pages/Home/Home",
-    "pages/Mine/mine",
-    "pages/Course/course",
-    "pages/Message/message",
     "pages/Home/autoplay1/autoplay1",
-    "pages/Home/home_wb1/home_wb1"
+    "pages/Home/home_wb1/home_wb1",
+
+    "pages/Mine/mine",
+    "pages/Mine/wddd/wddd",
+    "pages/Mine/wddjq/wddjq",
+
+    "pages/Course/course",
+    
+    "pages/Message/message"
   ],
   "window": {
     "backgroundTextStyle": "light",
