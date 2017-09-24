@@ -28,7 +28,11 @@ console.log('开始执行 SQL 文件...')
 let str_current = {}
 let usr_id
 async function get(ctx, next) {
-  usr_id = 'chenglei01'
+  usr_id = ctx.query.usr_id
+  console.log(next.query)
+  console.log(ctx.query)
+  console.log(usr_id)
+  console.log(content.replace(/\$usr_id/, usr_id))
   usr_address.raw(content.replace(/\$usr_id/, usr_id)).then(res => {
     console.log(res)
     console.log(res[0][0].usr_id)

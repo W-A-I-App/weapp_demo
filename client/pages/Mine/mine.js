@@ -54,5 +54,8 @@ Page({
     else if (p == "wddjq") {
       wx.navigateTo({ url: './wddjq/wddjq' });
     }
+    else if (p == "shdzgl") {
+      wx.navigateTo({ url: './shdzgl/shdzgl' });
+    }
   }
 })
