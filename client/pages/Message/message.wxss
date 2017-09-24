@@ -1,1 +1,9 @@
-/* pages/Message/message.wxss */
+.container_discuss{
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.container_recom{
+  margin-top: 20px;
+  margin-bottom: 10px;
+}

@@ -1,2 +1,25 @@
 <!--pages/Message/message.wxml-->
 <text>pages/Message/message.wxml</text>
+
+<view class="page_message">
+  <view class="message_container">
+    <swiper class="container_swipper">
+      <text class="swipper_text">预留滑动窗口</text>
+    </swiper>
+    
+    <view class="container_discuss">
+      <view>
+        <text>交流会</text>
+        
+      </view>
+      <view>
+        <text>此处放置每个交流板块</text>
+      </view>
+      
+    </view>
+    <view class="container_recom">
+      <text>小编推荐</text>
+    </view>
+  </view>
+</view>
+
