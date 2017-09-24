@@ -12,4 +12,6 @@ const { auth: { authorizationMiddleware, validationMiddleware } } = require('../
 
 router.get('/demo', controllers.demo.get)
 
+router.get('/usr_address', controllers.usr_address.get)
+
 module.exports = router
