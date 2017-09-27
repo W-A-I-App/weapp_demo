@@ -20,7 +20,7 @@ Page({
       header: {//请求头
         "Content-Type": "applciation/json"
       },
-      method: "POST",//get为默认方法/POST
+      method: "GET",//get为默认方法/POST
       success: function (res) {
         console.log(res);//res.data相当于ajax里面的data,为后台返回的数据
       },
