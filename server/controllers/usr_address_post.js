@@ -28,12 +28,14 @@ console.log('开始执行 SQL 文件...')
 let str_current = {}
 let usr_id
 async function post(ctx, next) {
+  console.log(content_post)
+  console.log(ctx.query.id)
   content_post.replace(/\$id/, ctx.query.id)
   content_post.replace(/\$usr_id/, ctx.query.usr_id)
   content_post.replace(/\$usr_name/, ctx.query.usr_name)
   content_post.replace(/\$usr_adress/, ctx.query.usr_adress)
   content_post.replace(/\$first_choice/, ctx.query.first_choice)
-  console.log(usr_address)
+  console.log(content_post)
   usr_address.raw(content_post).then(res => {
     console.log(res)
     console.log(res[0][0].usr_id)
