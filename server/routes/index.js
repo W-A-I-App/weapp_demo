@@ -14,5 +14,6 @@ router.get('/demo', controllers.demo.get)
 
 router.get('/usr_address_select', controllers.usr_address.select)
 router.get('/usr_address_insert', controllers.usr_address.insert)
+router.get('/usr_address_update', controllers.usr_address.update)
 
 module.exports = router
