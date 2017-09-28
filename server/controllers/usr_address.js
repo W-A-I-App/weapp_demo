@@ -6,6 +6,7 @@ console.log('开始初始化数据库...')
 // 初始化 SQL 文件路径
 const INIT_DB_FILE_select = path.join(__dirname, './sql/usr_address_select.sql')
 const INIT_DB_FILE_insert = path.join(__dirname, './sql/usr_address_insert.sql')
+const INIT_DB_FILE_update = path.join(__dirname, './sql/usr_address_update.sql')
 
 const usr_address = require('knex')({
   client: 'mysql',
@@ -23,10 +24,12 @@ const usr_address = require('knex')({
 // 读取 .sql 文件内容
 let content_select = fs.readFileSync(INIT_DB_FILE_select, 'utf8')
 let content_insert = fs.readFileSync(INIT_DB_FILE_insert, 'utf8')
+let content_update = fs.readFileSync(INIT_DB_FILE_update, 'utf8')
 
 console.log('开始执行 SQL 文件...')
 let str_current = {}
 let usr_id
+
 async function select(ctx, next) {
   usr_id = ctx.query.usr_id
   usr_address.raw(content_select.replace(/\$usr_id/, usr_id)).then(res => {
@@ -50,7 +53,27 @@ async function insert(ctx, next) {
     throw new Error(err)
   })
 }
+
+async function update(ctx, next) {
+  //TODO: Modify content from client side
+  //content_update = content_update.replace(/\$id/, ctx.query.id)
+  //content_update = content_update.replace(/\$usr_id/, ctx.query.usr_id)
+  //content_update = content_update.replace(/\$usr_adress/, ctx.query.usr_adress)
+  //content_update = content_update.replace(/\$first_choice/, ctx.query.first_choice)
+  content_update = content_update.replace(/\$id/, 3)
+  content_update = content_update.replace(/\$usr_id/, 'chenglei03')
+  content_update = content_update.replace(/\$usr_adress/, 'shanghaiminhang')
+  content_update = content_update.replace(/\$first_choice/, 0)
+  usr_address.raw(content_update).then(res => {
+    console.log('数据库执行成功！')
+    process.exit(0)
+  }, err => {
+    throw new Error(err)
+  })
+}
+
 module.exports = {
   select,
-  insert
+  insert,
+  update
 }
