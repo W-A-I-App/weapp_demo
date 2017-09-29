@@ -55,15 +55,11 @@ async function insert(ctx, next) {
 }
 
 async function update(ctx, next) {
-  //TODO: Modify content from client side
-  //content_update = content_update.replace(/\$id/, ctx.query.id)
-  //content_update = content_update.replace(/\$usr_id/, ctx.query.usr_id)
-  //content_update = content_update.replace(/\$usr_adress/, ctx.query.usr_adress)
-  //content_update = content_update.replace(/\$first_choice/, ctx.query.first_choice)
-  content_update = content_update.replace(/\$id/, 3)
-  content_update = content_update.replace(/\$usr_id/, 'chenglei03')
-  content_update = content_update.replace(/\$usr_adress/, 'shanghaiminhang')
-  content_update = content_update.replace(/\$first_choice/, 0)
+  content_update = content_update.replace(/\$id/, ctx.query.id)
+  content_update = content_update.replace(/\$usr_id/, ctx.query.usr_id)
+  content_update = content_update.replace(/\$usr_adress/, ctx.query.usr_adress)
+  content_update = content_update.replace(/\$first_choice/, ctx.query.first_choice)
+  console.log(content_update)
   usr_address.raw(content_update).then(res => {
     console.log('数据库执行成功！')
     process.exit(0)
