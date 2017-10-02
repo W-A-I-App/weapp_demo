@@ -7,6 +7,7 @@ console.log('开始初始化数据库...')
 const INIT_DB_FILE_select = path.join(__dirname, './sql/usr_address_select.sql')
 const INIT_DB_FILE_insert = path.join(__dirname, './sql/usr_address_insert.sql')
 const INIT_DB_FILE_update = path.join(__dirname, './sql/usr_address_update.sql')
+const INIT_DB_FILE_delete = path.join(__dirname, './sql/usr_address_delete.sql')
 
 const usr_address = require('knex')({
   client: 'mysql',
@@ -25,6 +26,7 @@ const usr_address = require('knex')({
 let content_select = fs.readFileSync(INIT_DB_FILE_select, 'utf8')
 let content_insert = fs.readFileSync(INIT_DB_FILE_insert, 'utf8')
 let content_update = fs.readFileSync(INIT_DB_FILE_update, 'utf8')
+let content_delete = fs.readFileSync(INIT_DB_FILE_delete, 'utf8')
 
 console.log('开始执行 SQL 文件...')
 let str_current = {}
@@ -68,8 +70,21 @@ async function update(ctx, next) {
   })
 }
 
+async function delete(ctx, next) {
+  content_delete = content_delete.replace(/\$id/, ctx.query.id)
+  content_delete = content_delete.replace(/\$usr_id/, ctx.query.usr_id)
+  console.log(content_delete)
+  usr_address.raw(content_delete).then(res => {
+    console.log('数据库执行成功！')
+    process.exit(0)
+  }, err => {
+    throw new Error(err)
+  })
+}
+
 module.exports = {
   select,
   insert,
-  update
+  update,
+  delete
 }
