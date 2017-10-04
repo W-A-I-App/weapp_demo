@@ -68,7 +68,6 @@ Page({
       },
       method: "GET",//get为默认方法/POST
       success: function (res) {
-        console.log(111);
         console.log(res);//res.data相当于ajax里面的data,为后台返回的数据
       },
       fail: function (err) { },//请求失败
@@ -89,7 +88,6 @@ Page({
       },
       method: "GET",//get为默认方法/POST
       success: function (res) {
-        console.log(111);
         console.log(res);//res.data相当于ajax里面的data,为后台返回的数据
       },
       fail: function (err) { },//请求失败
