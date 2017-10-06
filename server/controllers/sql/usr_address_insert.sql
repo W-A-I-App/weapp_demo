@@ -1,1 +1,1 @@
-INSERT INTO `usr_address` (`id`, `usr_id`, `usr_name`, `creat_date`, `modify_date`, `usr_adress`, `first_choice`) VALUES ('$id', '$usr_id', '$usr_name', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, '$usr_adress', '$first_choice');
+INSERT INTO `usr_address` (`id`, `usr_id`, `usr_name`, `creat_date`, `modify_date`, `usr_adress`, `first_choice`) VALUES (NULL, '$usr_id', '$usr_name', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, '$usr_adress', '$first_choice');
