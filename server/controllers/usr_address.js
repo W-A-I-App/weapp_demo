@@ -43,7 +43,6 @@ async function select(ctx, next) {
 }
 
 async function insert(ctx, next) {
-  content_insert = content_insert.replace(/\$id/, ctx.query.id)
   content_insert = content_insert.replace(/\$usr_id/, ctx.query.usr_id)
   content_insert = content_insert.replace(/\$usr_name/, ctx.query.usr_name)
   content_insert = content_insert.replace(/\$usr_adress/, ctx.query.usr_adress)
