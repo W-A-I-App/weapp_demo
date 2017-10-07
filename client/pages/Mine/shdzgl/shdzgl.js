@@ -14,7 +14,6 @@ Page({
     wx.request({
       url: 'https://gcdojwey.qcloud.la/weapp/usr_address_insert',//请求地址
       data: {//发送给后台的数据
-        id: 4,
         usr_id: "chenglei04",
         usr_name: "renchenglei4",
         usr_adress: "shanghaiminhang",
