@@ -1,15 +1,22 @@
 {
   "pages": [
     "pages/Home/Home",
-    "pages/Mine/mine",
     "pages/Home/autoplay1/autoplay1",
-    "pages/Home/home_wb1/home_wb1"
+    "pages/Home/home_wb1/home_wb1",
+
+    "pages/Mine/mine",
+    "pages/Mine/wddd/wddd",
+    "pages/Mine/wddjq/wddjq",
+    "pages/Mine/shdzgl/shdzgl",
+
+    "pages/Course/course",
+    
+    "pages/Message/message"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "backgroundColor": "#000000",
     "navigationBarBackgroundColor": "#FF7F00",
-    "navigationBarTitleText": "寓教于乐",
     "navigationBarTextStyle": "white",
     "enablePullDownRefresh": "true"
   },  
@@ -26,13 +33,13 @@
         "text": "首页"
       },
       {
-        "pagePath": "pages/course/course",
+        "pagePath": "pages/Course/course",
         "iconPath": "images/tabbar/课程暗.png",
         "selectedIconPath": "images/tabbar/课程亮.png",
         "text": "课程"
       },
       {
-        "pagePath": "pages/message/message",
+        "pagePath": "pages/Message/message",
         "iconPath": "images/tabbar/交流暗.png",
         "selectedIconPath": "images/tabbar/交流亮.png",
         "text": "交流"

@@ -1,0 +1,1 @@
+UPDATE `usr_address` SET `usr_adress` = '$usr_adress' , `first_choice` = '$first_choice' , `modify_date` = CURRENT_TIMESTAMP WHERE `usr_id` = '$usr_id' and `id` = $id
