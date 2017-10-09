@@ -32,8 +32,9 @@ console.log('开始执行 SQL 文件...')
 let str_current = {}
 let usr_id
 
-async function select(ctx, next) {
+async function Select(ctx, next) {
   usr_id = ctx.query.usr_id
+  console.log(content_select.replace(/\$usr_id/, usr_id))
   usr_address.raw(content_select.replace(/\$usr_id/, usr_id)).then(res => {
     str_current = res[0]
   }, err => {
@@ -42,11 +43,12 @@ async function select(ctx, next) {
   ctx.state.data = str_current
 }
 
-async function insert(ctx, next) {
+async function Insert(ctx, next) {
   content_insert = content_insert.replace(/\$usr_id/, ctx.query.usr_id)
   content_insert = content_insert.replace(/\$usr_name/, ctx.query.usr_name)
   content_insert = content_insert.replace(/\$usr_adress/, ctx.query.usr_adress)
   content_insert = content_insert.replace(/\$first_choice/, ctx.query.first_choice)
+  console.log(content_insert)
   usr_address.raw(content_insert).then(res => {
     console.log('数据库执行成功！')
     process.exit(0)
@@ -55,7 +57,7 @@ async function insert(ctx, next) {
   })
 }
 
-async function update(ctx, next) {
+async function Update(ctx, next) {
   content_update = content_update.replace(/\$id/, ctx.query.id)
   content_update = content_update.replace(/\$usr_id/, ctx.query.usr_id)
   content_update = content_update.replace(/\$usr_adress/, ctx.query.usr_adress)
@@ -69,7 +71,7 @@ async function update(ctx, next) {
   })
 }
 
-async function delete(ctx, next) {
+async function Delete(ctx, next) {
   content_delete = content_delete.replace(/\$id/, ctx.query.id)
   content_delete = content_delete.replace(/\$usr_id/, ctx.query.usr_id)
   console.log(content_delete)
@@ -82,8 +84,8 @@ async function delete(ctx, next) {
 }
 
 module.exports = {
-  select,
-  insert,
-  update,
-  delete
+  Select,
+  Insert,
+  Update,
+  Delete
 }

@@ -3,10 +3,10 @@ Page({
     logs: []
   },
   onLoad: function() {
-    //this.select();
+    this.select();
     //this.insert();
     //this.update();
-    this.delete();
+    //this.delete();
   },
 
   insert: function() {//定义函数名称
@@ -79,8 +79,8 @@ Page({
     wx.request({
       url: 'https://gcdojwey.qcloud.la/weapp/usr_address_delete',//请求地址
       data: {//发送给后台的数据
-        id: 3,
-        usr_id: "chenglei03"
+        id: 8,
+        usr_id: "chenglei04"
       },
       header: {//请求头
         "Content-Type": "applciation/json"
