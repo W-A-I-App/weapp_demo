@@ -12,8 +12,9 @@ const { auth: { authorizationMiddleware, validationMiddleware } } = require('../
 
 router.get('/demo', controllers.demo.get)
 
-router.get('/usr_address_select', controllers.usr_address.select)
-router.get('/usr_address_insert', controllers.usr_address.insert)
-router.get('/usr_address_update', controllers.usr_address.update)
+router.get('/usr_address_select', controllers.usr_address.Select)
+router.get('/usr_address_insert', controllers.usr_address.Insert)
+router.get('/usr_address_update', controllers.usr_address.Update)
+router.get('/usr_address_delete', controllers.usr_address.Delete)
 
 module.exports = router
