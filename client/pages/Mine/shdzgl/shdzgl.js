@@ -1,9 +1,19 @@
 Page({
   data: {
-    logs: []
+    userInfo: {},
+    userListInfo: [{
+      icon: '../images/iconfont-edit.png',
+      title: 'modz',
+      text: '默认地址',
+      isdefault: true
+    }, {
+      icon: '../images/iconfont-edit.png',
+      title: 'swmr',
+      text: '设为默认'
+    }]
   },
   onLoad: function() {
-    this.select();
+    //this.select();
     //this.insert();
     //this.update();
     //this.delete();
@@ -92,5 +102,11 @@ Page({
       fail: function (err) { },//请求失败
       complete: function () { }//请求完成后执行的函数
     })
+  },
+
+  navigateTo: function (event) {
+    console.log(event);
+    var p = event.currentTarget.id;
+    //TODO: Add othe work tab link
   }
 })
