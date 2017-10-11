@@ -5,7 +5,7 @@
             <view class="weui_cell_bd">
                 <view class="weui_cell_bd_p"> {{item.text}} </view>
             </view>
-            <view wx:if="{{item.isdefault}}" class="weui_cell_hd"><image src="{{item.icon}}"></image></view>
+            <view class="weui_cell_hd"><image src="{{item.icon}}"></image></view>
         </view>
     </navigator>
   </view>
