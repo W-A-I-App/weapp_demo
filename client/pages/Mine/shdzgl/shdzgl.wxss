@@ -87,3 +87,6 @@
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
+.navigator_mr{
+  color: green;
+}
