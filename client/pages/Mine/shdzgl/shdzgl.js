@@ -107,6 +107,10 @@ Page({
   navigateTo: function (event) {
     console.log(event);
     var p = event.currentTarget.id;
-    //TODO: Add othe work tab link
+    wx.navigateTo({ url: './modify/modify' });
+  },
+
+  set_as_default: function (event) {
+    this.update();
   }
 })

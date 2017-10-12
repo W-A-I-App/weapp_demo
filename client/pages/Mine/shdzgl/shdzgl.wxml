@@ -1,14 +1,14 @@
 <view class="container">
   <view class="info_list">
-    <view wx:for="{{userListInfo}}" bindtap="navigateTo" id="{{item.title}}">
+    <view wx:for="{{userListInfo}}" id="{{item.title}}">
       <view class="weui_cell_summary"> {{item.text}} </view>
         <view class="weui_cell_detail">
             <view class="weui_cell_detail_bd">
                 <view class="weui_cell_detail_bd_p"> {{item.text}} </view>
             </view>
-            <navigator class="weui_cell_detail_hd"><image src="{{item.icon}}"></image></navigator>
+            <view class="weui_cell_detail_hd"><image src="{{item.icon}}" bindtap="navigateTo"></image></view>
         </view>
-      <view class="weui_cell_default"> {{item.text}} </view>
+      <view class="weui_cell_default" bindtap="set_as_default" hover-class="navigator_mr"> {{item.text}} </view>
     </view>
   </view>
 </view>
