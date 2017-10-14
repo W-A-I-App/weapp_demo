@@ -3,13 +3,14 @@ Page({
     userInfo: {},
     userListInfo: [{
       icon: '../images/iconfont-edit.png',
-      title: 'modz',
+      title: 'mrdz',
       text: '默认地址',
       isdefault: true
     }, {
       icon: '../images/iconfont-edit.png',
       title: 'swmr',
-      text: '设为默认'
+      text: '设为默认',
+      isdefault: false
     }]
   },
   onLoad: function() {
