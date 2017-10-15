@@ -1,10 +1,10 @@
 <view class="container">
   <view class="info_list">
     <view wx:for="{{userListInfo}}" id="{{item.title}}">
-      <view class="weui_cell_summary"> {{item.text}} </view>
+      <view class="weui_cell_summary"> {{item.name}}: {{item.telephone}}</view>
         <view class="weui_cell_detail">
             <view class="weui_cell_detail_bd">
-                <view class="weui_cell_detail_bd_p"> {{item.text}} </view>
+                <view class="weui_cell_detail_bd_p"> {{item.address}} </view>
             </view>
             <view class="weui_cell_detail_hd"><image src="{{item.icon}}" bindtap="navigateTo"></image></view>
         </view>

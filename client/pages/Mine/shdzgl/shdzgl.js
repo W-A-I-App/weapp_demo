@@ -4,12 +4,16 @@ Page({
     userListInfo: [{
       icon: '../images/iconfont-edit.png',
       title: 'mrdz',
-      text: '默认地址',
+      name: '张三',
+      telephone: '123456789',
+      address: 'shanghai',
       isdefault: true
     }, {
       icon: '../images/iconfont-edit.png',
       title: 'swmr',
-      text: '设为默认',
+      name: '李四',
+      telephone: '987654321',
+      address: 'shandong',
       isdefault: false
     }]
   },
