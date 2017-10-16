@@ -2,19 +2,12 @@ Page({
   data: {
     userInfo: {},
     userListInfo: [{
-      icon: '../images/iconfont-edit.png',
-      title: 'mrdz',
-      name: '张三',
-      telephone: '123456789',
-      address: 'shanghai',
-      isdefault: true
-    }, {
-      icon: '../images/iconfont-edit.png',
-      title: 'swmr',
-      name: '李四',
-      telephone: '987654321',
-      address: 'shandong',
-      isdefault: false
+      icon: '',
+      title: '',
+      name: '',
+      telephone: '',
+      address: '',
+      isdefault: ''
     }]
   },
   onLoad: function() {
@@ -22,6 +15,7 @@ Page({
     //this.insert();
     //this.update();
     //this.delete();
+    this.list_address();
   },
 
   insert: function() {//定义函数名称
@@ -51,16 +45,29 @@ Page({
     wx.request({
       url: 'https://gcdojwey.qcloud.la/weapp/usr_address_select',//请求地址
       data: {//发送给后台的数据
-        usr_id: "chenglei01"
+        usr_id: "chenglei04"
       },
       header: {//请求头
         "Content-Type": "applciation/json"
       },
       method: "GET",//get为默认方法/POST
       success: function (res) {
-        that.setData({//如果在sucess直接写this就变成了wx.request()的this了.必须为getdata函数的this,不然无法重置调用函数
-          logs: res.data.data[0].usr_adress
-        })
+        console.log(res);
+        console.log(res.data.data.length);
+        for (var i = 0; i < res.data.data.length; i++) {
+          var icon = 'userListInfo[' + i + '].icon';
+          var name = 'userListInfo[' + i + '].name';
+          var phone = 'userListInfo[' + i + '].telephone';
+          var address = 'userListInfo[' + i + '].address';
+          var isdefault = 'userListInfo[' + i + '].isdefault';
+          that.setData({
+            [icon]: '../images/iconfont-edit.png',
+            [name]: '张三2',
+            [phone]: '123456789',
+            [address]: 'shanghai',
+            [isdefault]: true
+          })
+        }
       },
       fail: function (err) { },//请求失败
       complete: function () { }//请求完成后执行的函数
@@ -117,5 +124,9 @@ Page({
 
   set_as_default: function (event) {
     this.update();
+  },
+
+  list_address: function (event) {
+    this.select();
   }
 })
