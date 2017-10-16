@@ -52,20 +52,26 @@ Page({
       },
       method: "GET",//get为默认方法/POST
       success: function (res) {
-        console.log(res);
-        console.log(res.data.data.length);
         for (var i = 0; i < res.data.data.length; i++) {
           var icon = 'userListInfo[' + i + '].icon';
           var name = 'userListInfo[' + i + '].name';
           var phone = 'userListInfo[' + i + '].telephone';
           var address = 'userListInfo[' + i + '].address';
           var isdefault = 'userListInfo[' + i + '].isdefault';
+          var name_data = res.data.data[i].contacter;
+          var phone_data = res.data.data[i].telephone;
+          var address_data = res.data.data[i].usr_address;
+          if (res.data.data[i].first_choice = 1)
+            var isdefault_data = true;
+          else
+            var isdefault_data = false;
+
           that.setData({
             [icon]: '../images/iconfont-edit.png',
-            [name]: '张三2',
-            [phone]: '123456789',
-            [address]: 'shanghai',
-            [isdefault]: true
+            [name]: [name_data],
+            [phone]: [phone_data],
+            [address]: [address_data],
+            [isdefault]: [isdefault_data]
           })
         }
       },
