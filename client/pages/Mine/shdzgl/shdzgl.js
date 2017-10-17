@@ -23,9 +23,11 @@ Page({
     wx.request({
       url: 'https://gcdojwey.qcloud.la/weapp/usr_address_insert',//请求地址
       data: {//发送给后台的数据
-        usr_id: "chenglei04",
+        usr_id: "chenglei05",
         usr_name: "renchenglei4",
-        usr_adress: "shanghaiminhang",
+        contacter: "123qwe",
+        telephone: "123321456",
+        usr_address: "shanghaiminhang",
         first_choice: 0
       },
       header: {//请求头
@@ -87,7 +89,9 @@ Page({
       data: {//发送给后台的数据
         id: 3,
         usr_id: "chenglei03",
-        usr_adress: "shanghaiminhang",
+        usr_address: "shanghaiminhang",
+        contacter: "123qwe",
+        telephone: "123321456",
         first_choice: 1
       },
       header: {//请求头
