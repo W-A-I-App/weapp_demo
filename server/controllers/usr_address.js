@@ -46,7 +46,9 @@ async function Select(ctx, next) {
 async function Insert(ctx, next) {
   content_insert = content_insert.replace(/\$usr_id/, ctx.query.usr_id)
   content_insert = content_insert.replace(/\$usr_name/, ctx.query.usr_name)
-  content_insert = content_insert.replace(/\$usr_adress/, ctx.query.usr_adress)
+  content_insert = content_insert.replace(/\$contacter/, ctx.query.contacter)
+  content_insert = content_insert.replace(/\$telephone/, ctx.query.telephone)
+  content_insert = content_insert.replace(/\$usr_address/, ctx.query.usr_address)
   content_insert = content_insert.replace(/\$first_choice/, ctx.query.first_choice)
   console.log(content_insert)
   usr_address.raw(content_insert).then(res => {
@@ -60,7 +62,9 @@ async function Insert(ctx, next) {
 async function Update(ctx, next) {
   content_update = content_update.replace(/\$id/, ctx.query.id)
   content_update = content_update.replace(/\$usr_id/, ctx.query.usr_id)
-  content_update = content_update.replace(/\$usr_adress/, ctx.query.usr_adress)
+  content_update = content_update.replace(/\$contacter/, ctx.query.contacter)
+  content_update = content_update.replace(/\$telephone/, ctx.query.telephone)
+  content_update = content_update.replace(/\$usr_address/, ctx.query.usr_address)
   content_update = content_update.replace(/\$first_choice/, ctx.query.first_choice)
   console.log(content_update)
   usr_address.raw(content_update).then(res => {
