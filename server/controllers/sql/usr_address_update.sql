@@ -1,1 +1,1 @@
-UPDATE `usr_address` SET `usr_address` = '$usr_address' , `first_choice` = '$first_choice' , `contacter` = '$contacter' , `telephone` = '$telephone' , `modify_date` = CURRENT_TIMESTAMP WHERE `usr_id` = '$usr_id' and `id` = $id
+UPDATE `usr_address` SET `first_choice` = '$first_choice', `modify_date` = CURRENT_TIMESTAMP WHERE `id` = $id
