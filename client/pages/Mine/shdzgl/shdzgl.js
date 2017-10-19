@@ -59,20 +59,22 @@ Page({
           var name = 'userListInfo[' + i + '].name';
           var phone = 'userListInfo[' + i + '].telephone';
           var address = 'userListInfo[' + i + '].address';
+          var title = 'userListInfo[' + i + '].title';
           var isdefault = 'userListInfo[' + i + '].isdefault';
           var name_data = res.data.data[i].contacter;
           var phone_data = res.data.data[i].telephone;
+          var title_data = res.data.data[i].id;
           var address_data = res.data.data[i].usr_address;
-          if (res.data.data[i].first_choice = 1)
-            var isdefault_data = true;
+          if (res.data.data[i].first_choice == 1)
+            var isdefault_data = 1;
           else
-            var isdefault_data = false;
-
+            var isdefault_data = 0;
           that.setData({
             [icon]: '../images/iconfont-edit.png',
             [name]: [name_data],
             [phone]: [phone_data],
             [address]: [address_data],
+            [title]: [title_data],
             [isdefault]: [isdefault_data]
           })
         }
@@ -82,16 +84,12 @@ Page({
     })
   },
 
-  update: function () {//定义函数名称
+  update: function (id) {//定义函数名称
     var that = this;   // 这个地方非常重要，重置data{}里数据时候setData方法的this应为以及函数的this, 如果在下方的sucess直接写this就变成了wx.request()的this了
     wx.request({
       url: 'https://gcdojwey.qcloud.la/weapp/usr_address_update',//请求地址
       data: {//发送给后台的数据
-        id: 3,
-        usr_id: "chenglei03",
-        usr_address: "shanghaiminhang",
-        contacter: "123qwe",
-        telephone: "123321456",
+        id: id,
         first_choice: 1
       },
       header: {//请求头
@@ -133,7 +131,8 @@ Page({
   },
 
   set_as_default: function (event) {
-    this.update();
+    var p = event.currentTarget.id;
+    this.update(p);
   },
 
   list_address: function (event) {
