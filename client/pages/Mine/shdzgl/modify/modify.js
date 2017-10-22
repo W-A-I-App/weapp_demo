@@ -84,9 +84,15 @@ Page({
       })
   },
   submitForm(e) {
-    const params = e.detail.value
-
-    console.log(params)
+    /*
+     * Get input date from user
+     */
+    const params = e.detail.value;
+    console.log(params);
+    console.log(params.name);
+    console.log(params.gender);
+    console.log(params.tel);
+    console.log(params.address);
 
     if (!this.WxValidate.checkForm(e)) {
       const error = this.WxValidate.errorList[0]
