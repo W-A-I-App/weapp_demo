@@ -138,5 +138,8 @@ Page({
 
   list_address: function (event) {
     this.select();
+  },
+  add_new_address: function (event) {
+    wx.navigateTo({ url: './add/add' });
   }
 })
