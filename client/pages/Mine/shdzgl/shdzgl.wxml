@@ -11,4 +11,8 @@
       <view class="weui_cell_default" bindtap="set_as_default" hover-class="navigator_mr" id="{{item.title}}"> {{ item.isdefault == 1 ? '默认地址' : '设为默认' }}</view>
     </view>
   </view>
+  <view class="btn-plus" bindtap="add_new_address">
+    <image class="icon" src="../images/iconfont-plus-circle.png" />
+    <text>新增地址</text>
+  </view>
 </view>
