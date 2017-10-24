@@ -50,10 +50,10 @@ Page({
         },
       })
 
-    this.address = App.HttpResource('/address/:id', { id: '@id' })
-    this.setData({
-      id: option.id
-    })
+    //this.address = App.HttpResource('/address/:id', { id: '@id' })
+    //this.setData({
+    // id: option.id
+    //})
   },
   onShow() {
     this.renderForm(this.data.id)
@@ -132,6 +132,7 @@ Page({
       .then(() => App.WxService.navigateBack())
   },
   chooseLocation() {
+    console.log("chooseLocation");
     App.WxService.chooseLocation()
       .then(data => {
         console.log(data)

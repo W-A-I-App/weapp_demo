@@ -1,6 +1,8 @@
 /**
  * @fileOverview 微信小程序的入口文件
  */
+import WxValidate from 'lib/WxValidate';
+import WxService from 'lib/WxService';
 
 var config = require('./config');
 
@@ -38,5 +40,7 @@ App({
   },
   globalData: {
     hasLogin: false
-  }
+  },
+  WxValidate: (rules, messages) => new WxValidate(rules, messages),
+  WxService: new WxService
 })
