@@ -50,7 +50,7 @@ Page({
         },
       })
 
-    this.address = App.HttpResource('/address/:id', { id: '@id' })
+    //this.address = App.HttpResource('/address/:id', { id: '@id' })
   },
   submitForm(e) {
     const params = e.detail.value
