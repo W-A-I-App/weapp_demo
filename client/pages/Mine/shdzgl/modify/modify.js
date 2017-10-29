@@ -54,6 +54,7 @@ Page({
     //this.setData({
     // id: option.id
     //})
+    this.address_onload();
   },
   onShow() {
     this.renderForm(this.data.id)
@@ -141,4 +142,12 @@ Page({
         })
       })
   },
+  address_onload(){
+    this.setData({
+      ['form.name']: 'shange',
+      ['form.tel']: '12345678901',
+      ['form.address']: 'shanghai',
+      ['form.is_def']: 1
+    })
+  }
 })

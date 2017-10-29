@@ -46,7 +46,7 @@ Page({
           required: '请输入收货人电话',
         },
         address: {
-          required: '请输入收货人地a址',
+          required: '请输入收货人地址',
         },
       })
 
