@@ -34,8 +34,18 @@ let usr_id
 
 async function Select(ctx, next) {
   usr_id = ctx.query.usr_id
+  id = ctx.query.id
   console.log(content_select.replace(/\$usr_id/, usr_id))
-  await usr_address.raw(content_select.replace(/\$usr_id/, usr_id)).then(res => {
+  if (usr_id){
+    content_select = content_select.replace(/\$usr_id/, usr_id);
+    content_select = content_select.replace(/\$id/, '\'\'');
+  }
+  else{
+    content_select = content_select.replace(/\$id/, id);
+    content_select = content_select.replace(/\$usr_id/, '\'\'');
+  }
+  console.log(content_select)
+  await usr_address.raw(content_select).then(res => {
     str_current = res[0]
   }, err => {
      str_current = err

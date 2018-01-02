@@ -128,7 +128,7 @@ Page({
   navigateTo: function (event) {
     console.log(event);
     var p = event.currentTarget.id;
-    wx.navigateTo({ url: './modify/modify' });
+    wx.navigateTo({ url: './modify/modify?id=' + p});
   },
 
   set_as_default: function (event) {
@@ -140,6 +140,6 @@ Page({
     this.select();
   },
   add_new_address: function (event) {
-    wx.navigateTo({ url: './add/add' });
+    wx.navigateTo({ url: './add/add'});
   }
 })

@@ -1,1 +1,1 @@
-SELECT * FROM `usr_address` WHERE `usr_id` LIKE '$usr_id'
+SELECT * FROM `usr_address` WHERE `usr_id` = '$usr_id' or `id` = $id
