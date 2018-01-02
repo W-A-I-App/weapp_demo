@@ -54,7 +54,7 @@ Page({
     //this.setData({
     // id: option.id
     //})
-    this.address_onload();
+    this.address_onload(option.id);
   },
   onShow() {
     this.renderForm(this.data.id)
@@ -104,21 +104,12 @@ Page({
       })
       return false
     }
-
-    // App.HttpService.putAddress(id, params)
-    this.address.updateAsync({ id: id }, params)
-      .then(data => {
-        console.log(data)
-        if (data.meta.code == 0) {
-          this.showToast(data.meta.message)
-        }
-      })
+    console.log("submit message");
   },
   delete() {
     // App.HttpService.deleteAddress(this.data.id)
     this.address.deleteAsync({ id: this.data.id })
       .then(data => {
-        console.log(data)
         if (data.meta.code == 0) {
           this.showToast(data.meta.message)
         }
@@ -142,12 +133,38 @@ Page({
         })
       })
   },
-  address_onload(){
-    this.setData({
-      ['form.name']: 'shange',
-      ['form.tel']: '12345678901',
-      ['form.address']: 'shanghai',
-      ['form.is_def']: 1
+  address_onload(id){
+    var that = this;   // 这个地方非常重要，重置data{}里数据时候setData方法的this应为以及函数的this, 如果在下方的sucess直接写this就变成了wx.request()的this了
+    console.log(id);
+    wx.request({
+      url: 'https://gcdojwey.qcloud.la/weapp/usr_address_select',//请求地址
+      data: {//发送给后台的数据
+        id: id
+      },
+      header: {//请求头
+        "Content-Type": "applciation/json"
+      },
+      method: "GET",//get为默认方法/POST
+      success: function (res) {
+        console.log(res);
+        var name_data = res.data.data[0].contacter;
+        var phone_data = res.data.data[0].telephone;
+        var title_data = res.data.data[0].id;
+        var address_data = res.data.data[0].usr_address;
+        console.log(name_data)
+        if (res.data.data[0].first_choice == 1)
+          var isdefault_data = 1;
+        else
+          var isdefault_data = 0;
+        that.setData({
+          ['form.name']: [name_data],
+          ['form.tel']: [phone_data],
+          ['form.address']: [address_data],
+          ['form.is_def']: [isdefault_data]
+        })
+      },
+      fail: function (err) { },//请求失败
+      complete: function () { }//请求完成后执行的函数
     })
   }
 })
