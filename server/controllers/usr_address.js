@@ -35,7 +35,7 @@ let usr_id
 async function Select(ctx, next) {
   usr_id = ctx.query.usr_id
   console.log(content_select.replace(/\$usr_id/, usr_id))
-  usr_address.raw(content_select.replace(/\$usr_id/, usr_id)).then(res => {
+  await usr_address.raw(content_select.replace(/\$usr_id/, usr_id)).then(res => {
     str_current = res[0]
   }, err => {
      str_current = err
