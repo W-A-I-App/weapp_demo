@@ -2,13 +2,14 @@ const App = getApp()
 
 Page({
   data: {
+    id: '',
     show: !0,
     form: {
       name: '',
       gender: 'male',
       tel: '',
       address: '',
-      is_def: !1,
+      is_def: '',
     },
     radio: [
       {
@@ -55,6 +56,9 @@ Page({
     // id: option.id
     //})
     this.address_onload(option.id);
+    this.setData({
+      id: option.id,
+    })
   },
   onShow() {
     this.renderForm(this.data.id)
@@ -84,6 +88,37 @@ Page({
         }
       })
   },
+  update: function (id, params) {//定义函数名称
+    var that = this;   // 这个地方非常重要，重置data{}里数据时候setData方法的this应为以及函数的this, 如果在下方的sucess直接写this就变成了wx.request()的this了
+    console.log(params)
+    console.log(that.params)
+    var first_choice_data;
+    if (params.is_def)
+      first_choice_data = 1;
+    else
+      first_choice_data = 0;
+    console.log(first_choice_data);
+    wx.request({
+      url: 'https://gcdojwey.qcloud.la/weapp/usr_address_update',//请求地址
+      data: {//发送给后台的数据
+        id: id,
+        first_choice: first_choice_data,
+        usr_name: "chenglei04",
+        contacter: params.name,
+        telephone: params.tel,
+        usr_address: params.address
+      },
+      header: {//请求头
+        "Content-Type": "applciation/json"
+      },
+      method: "GET",//get为默认方法/POST
+      success: function (res) {
+        console.log("success");//res.data相当于ajax里面的data,为后台返回的数据
+      },
+      fail: function (err) { },//请求失败
+      complete: function () { }//请求完成后执行的函数
+    })
+  },
   submitForm(e) {
     /*
      * Get input date from user
@@ -104,6 +139,8 @@ Page({
       })
       return false
     }
+    console.log(params)
+    this.update(this.data.id, params)
     console.log("submit message");
   },
   delete() {
@@ -156,6 +193,7 @@ Page({
           var isdefault_data = 1;
         else
           var isdefault_data = 0;
+        console.log(isdefault_data)
         that.setData({
           ['form.name']: [name_data],
           ['form.tel']: [phone_data],
