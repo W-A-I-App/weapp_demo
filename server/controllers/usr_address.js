@@ -30,7 +30,6 @@ let content_delete = fs.readFileSync(INIT_DB_FILE_delete, 'utf8')
 
 console.log('开始执行 SQL 文件...')
 let str_current = {}
-let usr_id
 
 async function Select(ctx, next) {
   usr_id = ctx.query.usr_id
@@ -72,6 +71,10 @@ async function Insert(ctx, next) {
 async function Update(ctx, next) {
   content_update = content_update.replace(/\$id/, ctx.query.id)
   content_update = content_update.replace(/\$first_choice/, ctx.query.first_choice)
+  content_update = content_update.replace(/\$usr_name/, ctx.query.usr_name)
+  content_update = content_update.replace(/\$contacter/, ctx.query.contacter)
+  content_update = content_update.replace(/\$telephone/, ctx.query.telephone)
+  content_update = content_update.replace(/\$usr_address/, ctx.query.usr_address)
   console.log(content_update)
   usr_address.raw(content_update).then(res => {
     console.log('数据库执行成功！')
