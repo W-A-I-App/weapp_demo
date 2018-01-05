@@ -143,14 +143,38 @@ Page({
     this.update(this.data.id, params)
     console.log("submit message");
   },
-  delete() {
+  delete: function (id) {//定义函数名称
+  console.log('delete id')
+  console.log(id)
+    var that = this;   // 这个地方非常重要，重置data{}里数据时候setData方法的this应为以及函数的this, 如果在下方的sucess直接写this就变成了wx.request()的this了
+    wx.request({
+      url: 'https://gcdojwey.qcloud.la/weapp/usr_address_delete',//请求地址
+      data: {//发送给后台的数据
+        id: id,
+        usr_id: "chenglei04"
+      },
+      header: {//请求头
+        "Content-Type": "applciation/json"
+      },
+      method: "GET",//get为默认方法/POST
+      success: function (res) {
+        console.log("success");//res.data相当于ajax里面的data,为后台返回的数据
+      },
+      fail: function (err) { },//请求失败
+      complete: function () { }//请求完成后执行的函数
+    })
+  },
+  delete_tb() {
     // App.HttpService.deleteAddress(this.data.id)
+    delete (this.data.id)
+    /*
     this.address.deleteAsync({ id: this.data.id })
       .then(data => {
         if (data.meta.code == 0) {
           this.showToast(data.meta.message)
         }
       })
+      */
   },
   showToast(message) {
     App.WxService.showToast({
