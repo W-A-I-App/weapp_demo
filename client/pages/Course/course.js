@@ -1,3 +1,13 @@
+function getRandomColor() {
+  let rgb = []
+  for (let i = 0; i < 3; ++i) {
+    let color = Math.floor(Math.random() * 256).toString(16)
+    color = color.length == 1 ? '0' + color : color
+    rgb.push(color)
+  }
+  return '#' + rgb.join('')
+}
+
 Page({
   onReady: function (res) {
     this.videoContext = wx.createVideoContext('myVideo')
@@ -15,13 +25,12 @@ Page({
         text: '第 3s 出现的弹幕',
         color: '#ff00ff',
         time: 3
-      }
-    ]
+      }]
   },
   bindInputBlur: function (e) {
     this.inputValue = e.detail.value
   },
-  bindButtonTap: function () { //视频下载
+  bindButtonTap: function () {
     var that = this
     wx.chooseVideo({
       sourceType: ['album', 'camera'],
@@ -34,23 +43,10 @@ Page({
       }
     })
   },
-  getRandomColor: function () {
-    let rgb = []
-    for (let i = 0; i < 3; ++i) {
-    let color = Math.floor(Math.random() * 256).toString(16)
-    color = color.length == 1 ? '0' + color : color
-    rgb.push(color)
-    }
-    return '#' + rgb.join('')
-  },
   bindSendDanmu: function () {
     this.videoContext.sendDanmu({
       text: this.inputValue,
       color: getRandomColor()
     })
-  },
-  videoErrorCallback: function (e) {
-    console.log('视频错误信息:');
-    console.log(e.detail.errMsg);
   }
 })
