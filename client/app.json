@@ -12,6 +12,7 @@
     "pages/Mine/shdzgl/add/add",
 
     "pages/Course/course",
+    "pages/Course/list/course1",
     
     "pages/Message/message"
   ],
