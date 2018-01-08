@@ -1,52 +1,50 @@
-function getRandomColor() {
-  let rgb = []
-  for (let i = 0; i < 3; ++i) {
-    let color = Math.floor(Math.random() * 256).toString(16)
-    color = color.length == 1 ? '0' + color : color
-    rgb.push(color)
-  }
-  return '#' + rgb.join('')
-}
+
+var app = getApp()
 
 Page({
-  onReady: function (res) {
-    this.videoContext = wx.createVideoContext('myVideo')
-  },
-  inputValue: '',
   data: {
-    src: '',
-    danmuList: [
-      {
-        text: '第 1s 出现的弹幕',
-        color: '#ff0000',
-        time: 1
-      },
-      {
-        text: '第 3s 出现的弹幕',
-        color: '#ff00ff',
-        time: 3
-      }]
+    courseList: [{
+      id: '',
+      title: '',
+      url: '',
+      image: ''
+    }]
   },
-  bindInputBlur: function (e) {
-    this.inputValue = e.detail.value
+
+  onLoad: function (options) {
+    this.loaddata()
   },
-  bindButtonTap: function () {
-    var that = this
-    wx.chooseVideo({
-      sourceType: ['album', 'camera'],
-      maxDuration: 60,
-      camera: ['front', 'back'],
-      success: function (res) {
-        that.setData({
-          src: res.tempFilePath
-        })
-      }
-    })
+
+  loaddata: function(){
+    var that = this;
+    for (var i = 0; i < 2; i++) {
+      var id = 'courseList[' + i + '].id';
+      var title = 'courseList[' + i + '].title';
+      var url = 'courseList[' + i + '].url';
+      var image = 'courseList[' + i + '].image';
+      var id_data = i;
+      var title_data = i + 1;
+      var url_data = i + 2;
+      var image_data = 'aa';
+      that.setData({
+        id: id_data,
+        title: title_data,
+        url: url_data,
+        image: image_data
+      })
+    }
+    console.log("hello")
+    console.log(this.data.courseList)
   },
-  bindSendDanmu: function () {
-    this.videoContext.sendDanmu({
-      text: this.inputValue,
-      color: getRandomColor()
+
+  onPullDownRefresh: function () {
+  },
+
+  // banner上图片点击
+  bannerImageTap: function (e) {
+    wx.navigateTo({
+      url: '../detail/detail?id=' + e.target.dataset.id
     })
   }
+
 })
