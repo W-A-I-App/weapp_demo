@@ -1,27 +1,14 @@
 <view class="container">
 <view classs="items-container">
   <block wx:for="{{courseList}}">
-    <navigator url="./list/course1" hover-class="navigator-hover">
+    <navigator url="{{item.url}}" hover-class="navigator-hover">
       <view class="item-type2">
         <view class="item-type2-top">
         <view class="item-type2-left">
-        <text class="item-type2-title">This is a test blocker</text>
+        <text class="item-type2-title">{{item.title}}</text>
         </view>
         <view class="item-type2-right">
-          <image src="./image/course-1.png" mode="aspectFill" class="item-type2-image"></image>
-        </view>
-        </view>
-        <view class="bottom-line-view"></view>
-      </view>
-    </navigator>
-     <navigator url="./list/course2" hover-class="navigator-hover">
-      <view class="item-type2">
-        <view class="item-type2-top">
-        <view class="item-type2-left">
-        <text class="item-type2-title">This is a test blocker</text>
-        </view>
-        <view class="item-type2-right">
-          <image src="./image/course-2.png" mode="aspectFill" class="item-type2-image"></image>
+          <image src="{{item.image}}" mode="aspectFill" class="item-type2-image"></image>
         </view>
         </view>
         <view class="bottom-line-view"></view>
