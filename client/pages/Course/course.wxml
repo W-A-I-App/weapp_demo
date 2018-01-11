@@ -1,3 +1,43 @@
+<view class="line toutiao">
+        <image class="toutiao-img" mode="scaleToFill" src="./image/bbtt.png"></image>
+        <view class="two-line-text">
+            <text class="text-center txt">三岁儿童, 普通话要标准! 快来看看 ...</text>
+            <text class="text-center txt">如何说好普通话, 重要看这五点 ...</text>
+        </view>
+</view>
+<view class="line forth">
+        <view class="left">
+            <image class="forth-img" mode="scaleToFill" src="http://b2.hucdn.com//upload/hmp/1609/29/54731005601173_326x410.jpg!320q50.webp"></image>
+        </view>
+        <view class="right">
+            <view class="top">
+                <view class="cl4">
+                    <image class="cl4-img" mode="scaleToFill" src="http://b2.hucdn.com//upload/hmp/1607/15/48459914315915_212x204.jpg!200q50.webp"></image>
+                </view>
+                <view class="cl4">
+                    <image class="cl4-img" mode="scaleToFill" src="http://b2.hucdn.com//upload/hmp/1609/22/11023966677968_212x204.jpg!200q50.webp"></image>
+                </view>
+            </view>
+            <view class="bottom">
+                <view class="cl4">
+                    <image class="cl4-img" mode="scaleToFill" src="http://b2.hucdn.com//upload/hmp/1609/28/67263117394059_212x204.jpg!200q50.webp"></image>
+                </view>
+                <view class="cl4">
+                    <image class="cl4-img" mode="scaleToFill" src="http://b2.hucdn.com//upload/hmp/1609/28/63148107355039_212x204.jpg!200q50.webp"></image>
+                </view>
+            </view>
+        </view>
+    </view>
+     <view class="line one-img">
+        <text class="alone-line-text">今日特卖</text>
+        <image class="poster" mode="scaleToFill" src="http://b1.hucdn.com/upload/show/1609/22/07024560401727_750x350.jpg!750q50.webp"></image>
+    </view>
+    <view class="line one-img">
+        <image class="poster" mode="scaleToFill" src="http://b1.hucdn.com/upload/show/1609/23/03493200704091_750x350.jpg!750q50.webp"></image>
+    </view>
+    <view class="line one-img">
+        <image class="poster" mode="scaleToFill" src="http://b1.hucdn.com/upload/show/1609/26/89758650701601_750x350.jpg!750q50.webp"></image>
+    </view>
 <view class="container">
 <view classs="items-container">
   <block wx:for="{{courseList}}">

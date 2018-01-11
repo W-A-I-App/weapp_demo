@@ -8,6 +8,24 @@
         </swiper-item>    
       </block>
     </swiper>
+    <view class="second line">
+        <view class="sl-col">
+             <image class="second-img" mode="scaleToFill" bindtap="navigateTo" id="home_wb1" src="../../images/Home/home_wb1.png"></image>
+             <text>home_wb1</text>
+        </view>
+        <view class="sl-col">
+            <image class="second-img" mode="scaleToFill" src="../../images/Home/home_wb2.png"></image>
+            <text>home_wb2</text>
+        </view>
+        <view class="sl-col">
+             <image class="second-img" mode="scaleToFill" src="../../images/Home/home_wb3.png"></image>
+            <text>home_wb3</text>
+        </view>
+        <view class="sl-col">
+             <image class="second-img" mode="scaleToFill" src="../../images/Home/home_wb4.png"></image>
+             <text>home_wb4</text>
+        </view>
+    </view>
    <view class="workbench">
       <view class="list">
         <view class="items">
