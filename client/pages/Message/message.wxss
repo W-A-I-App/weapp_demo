@@ -1,9 +1,15 @@
-.container_discuss{
-  margin-top: 10px;
-  margin-bottom: 20px;
+.line{
+    display: flex;
+    margin: 5rpx;
+    border: #ddd solid 1px;
+    padding: 50rpx;
 }
-
-.container_recom{
-  margin-top: 20px;
-  margin-bottom: 10px;
+.one-img{
+    flex-direction: column;
+    padding: 1rpx;
+}
+.poster{
+    width: 370px;
+    height: 200px;
+    background: #0f0;
 }

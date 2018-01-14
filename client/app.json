@@ -15,7 +15,9 @@
     "pages/Course/list/course1",
     "pages/Course/list/course2",
     
-    "pages/Message/message"
+    "pages/Message/message",
+    "pages/Message/tools/cpy"
+
   ],
   "window": {
     "backgroundTextStyle": "light",

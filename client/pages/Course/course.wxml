@@ -28,8 +28,8 @@
             </view>
         </view>
     </view>
-     <view class="line one-img">
-        <text class="alone-line-text">今日特卖</text>
+    <view class="line one-img">
+        <text class="alone-line-text">精品课程</text>
         <image class="poster" mode="scaleToFill" src="http://b1.hucdn.com/upload/show/1609/22/07024560401727_750x350.jpg!750q50.webp"></image>
     </view>
     <view class="line one-img">
