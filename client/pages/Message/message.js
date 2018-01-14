@@ -62,5 +62,13 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+  navigateTo: function (event) {
+    console.log(event);
+    var p = event.currentTarget.id;
+    //TODO: Add othe work tab link
+    if (p == "cpy") {
+      wx.navigateTo({ url: './tools/cpy' });
+    }
   }
 })
