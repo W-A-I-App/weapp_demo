@@ -68,7 +68,10 @@ Page({
     var p = event.currentTarget.id;
     //TODO: Add othe work tab link
     if (p == "cpy") {
-      wx.navigateTo({ url: './tools/cpy' });
+      wx.navigateTo({ url: './tools/cpy/cpy' });
+    }
+    if (p == "2048") {
+      wx.navigateTo({ url: './games/2048/2048' });
     }
   }
 })
