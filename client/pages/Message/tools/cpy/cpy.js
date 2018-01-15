@@ -1,4 +1,4 @@
-var pinyin = require('../../../lib/pinyin.js');
+var pinyin = require('../../../../lib/pinyin.js');
 Page({
   data: {
     pinyinText: '',

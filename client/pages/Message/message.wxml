@@ -1,4 +1,7 @@
 <view class="line one-img" bindtap="navigateTo" id="cpy">
         <image class="poster" mode="scaleToFill" src="./images/cpy.png"></image>
 </view>
+<view class="line one-img" bindtap="navigateTo" id="2048">
+        <image class="poster" mode="scaleToFill" src="./images/2048.png"></image>
+</view>
 

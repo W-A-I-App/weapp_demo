@@ -16,15 +16,14 @@
     "pages/Course/list/course2",
     
     "pages/Message/message",
-    "pages/Message/tools/cpy"
-
+    "pages/Message/tools/cpy/cpy",
+    "pages/Message/games/2048/2048"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "backgroundColor": "#000000",
     "navigationBarBackgroundColor": "#FF7F00",
-    "navigationBarTextStyle": "white",
-    "enablePullDownRefresh": "true"
+    "navigationBarTextStyle": "white"
   },  
   "tabBar": {
     "color": "#dddddd",
