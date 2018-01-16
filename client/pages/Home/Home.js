@@ -1,7 +1,7 @@
 Page({
   //TODO: Replace Picture and adjust ui
   data: {
-    movies: [
+    swiper: [
       {
         url: './images/autoplay1.png',
         title: "autoplay1",
@@ -15,6 +15,24 @@ Page({
         title: 'autoplay3',
       }
     ],
+    workbench: [
+      {
+        url: '../../images/Home/home_wb1.png',
+        title: "home_wb1",
+      },
+      {
+        url: '../../images/Home/home_wb2.png',
+        title: 'home_wb2',
+      },
+      {
+        url: '../../images/Home/home_wb3.png',
+        title: 'home_wb3',
+      },
+      {
+        url: '../../images/Home/home_wb4.png',
+        title: 'home_wb4',
+      },
+    ],
     indicatorDots: true,
     vertical: false,
     autoplay: true,
@@ -24,12 +42,6 @@ Page({
   navigateTo: function (event) {
     console.log(event);
     var p = event.currentTarget.id;
-    //TODO: Add othe work tab link
-    if (p == "autoplay1") {
-      wx.navigateTo({ url: './autoplay1/autoplay1' });
-    }
-    else if (p == "home_wb1") {
-      wx.navigateTo({ url: './home_wb1/home_wb1' });
-    }
+    wx.navigateTo({ url: './' + p + '/' + p });
   }
 })

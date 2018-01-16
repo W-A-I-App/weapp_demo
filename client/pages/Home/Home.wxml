@@ -2,28 +2,16 @@
   <view class="page__bd">
     <swiper class="swiper" indicator-dots="{{indicatorDots}}" vertical="{{vertical}}"
       autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-      <block wx:for="{{movies}}" wx:for-index="index">    
+      <block wx:for="{{swiper}}" wx:for-index="index">    
         <swiper-item>    
           <image src="{{item.url}}" class="slide-image" mode="aspectFill" bindtap="navigateTo" id="{{item.title}}"/>    
         </swiper-item>    
       </block>
     </swiper>
     <view class="second line">
-        <view class="sl-col">
-             <image class="second-img" mode="scaleToFill" bindtap="navigateTo" id="home_wb1" src="../../images/Home/home_wb1.png"></image>
+        <view class="sl-col" wx:for="{{workbench}}" wx:for-index="index">
+             <image class="second-img" mode="scaleToFill" bindtap="navigateTo" id="{{item.title}}" src="{{item.url}}"></image>
              <text>home_wb1</text>
-        </view>
-        <view class="sl-col">
-            <image class="second-img" mode="scaleToFill" src="../../images/Home/home_wb2.png"></image>
-            <text>home_wb2</text>
-        </view>
-        <view class="sl-col">
-             <image class="second-img" mode="scaleToFill" src="../../images/Home/home_wb3.png"></image>
-            <text>home_wb3</text>
-        </view>
-        <view class="sl-col">
-             <image class="second-img" mode="scaleToFill" src="../../images/Home/home_wb4.png"></image>
-             <text>home_wb4</text>
         </view>
     </view>
    <view class="workbench">

@@ -2,6 +2,8 @@
   "pages": [
     "pages/Home/Home",
     "pages/Home/autoplay1/autoplay1",
+    "pages/Home/autoplay2/autoplay2",
+    "pages/Home/autoplay3/autoplay3",
     "pages/Home/home_wb1/home_wb1",
 
     "pages/Mine/mine",
