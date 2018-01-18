@@ -1,127 +1,55 @@
-.menu{
-  position: fixed;
-  top: 0px;
-  width: 100%;
-  background: #fff;
-  border-bottom:#eee solid 1px;
-  z-index: 100000
-}
-
-.top-nav{
-    white-space: nowrap;
-    width: 95%;
-    margin: 0 auto;
-}
-
-.top-btn{
-    display: inline-block;
-    padding: 22rpx;
-    font-size: 16px;
-}
-
-.top-hoverd-btn{
-    color: #42bd56;
-    border-bottom: #42bd56 solid 1px;
-}
-
-
 .line{
     display: flex;
     margin: 5rpx;
     border: #ddd solid 1px;
     padding: 50rpx;
 }
-
-.text-center{
-    margin: 0 auto;
-}
-
-.first{
-    text-align: center;
-    padding: 3rpx;
-}
-
 .toutiao{
     padding: 1rpx;
 }
-
 .toutiao-img{
     width: 80px;
     height: 80px;
 }
-
 .two-line-text{
     padding: 8px;
     display: flex;
     flex-direction: column;
 }
-
+.text-center{
+    margin: 0 auto;
+}
 .txt{
     margin: 8px 10px;
     font-size: 14px;
     white-space: nowrap;
 }
-
-.first-img{
-    width: 370px;
-    height: 180px;
-}
-
-.second{
-    padding: 5rpx;
-}
-
-.second-img{
-    height: 50px;
-    width: 95%;
-    margin-bottom: 5rpx;
-}
-
-.sl-col{
-    width: 84px;
-    margin: 0 2rpx;
-    border: #ddd solid 1px;
-    text-align: center;
-    padding: 3rpx;
-    font-size: 12px;
-}
-
 .forth{
     display: flex;
     text-align: center;
     padding: 10px;
 }
-
-.forth-img{
-    width: 150px;
-    height: 200px;
-}
-
 .forth .left{
     border: #ddd dotted 1px;
     padding: 1rpx;
     margin-right: 5rpx;
 }
-
+.forth-img{
+    width: 150px;
+    height: 200px;
+}
 .forth .right{
     display: flex;
     border: #ddd dotted 1px;
     flex-direction: column;
     font-size: 12px;
 }
-
 .forth .bottom,
 .forth .top{
     display: flex;
     margin: 1rpx;
 
 }
-
-.cl4-img{
-    width: 90px;
-    height: 90px;
-}
-
 .bottom .cl4,
 .top .cl4{
     width: 50%;
@@ -130,53 +58,27 @@
     flex: auto;
     text-align: center;
 }
-
-.one-img{
-    flex-direction: column;
-    padding: 1rpx;
+.cl4-img{
+    width: 90px;
+    height: 90px;
 }
-
 .alone-line-text{
     width: 100%;
     text-align: center;
     padding: 30rpx;
 }
-
+.one-img{
+    flex-direction: column;
+    padding: 1rpx;
+}
 .poster{
     width: 370px;
     height: 200px;
     background: #0f0;
 }
-.banner{
-  position: relative;
-}
-
-.banners {
-  width: 100%;
-  height: 320rpx;
-}
-
-.banner-image {
-  width: 100%;
-  height: 100%;
-}
-
 .items-container {
   width: 100%;
 }
-
-.item-type1 {
-  width: 100%;
-  height: 45rpx;
-  background: #f6f6f6;
-}
-
-.item-text-title {
-  color: #999999;
-  font-size: 30rpx;
-  padding-left: 20rpx;
-}
-
 .item-type2 {
   justify-content: space-between;
   display: flex;
@@ -227,96 +129,4 @@
   background: #d8d8d8;
   width: 100%;
   height: 3rpx;
-}
-
-.item-type3 {
-  background: white;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 240rpx;
-}
-
-.item-type3-top {
-  background: white;
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  height: 50rpx;
-}
-
-.item-type3-top-image {
-  width: 28rpx;
-  height: 28rpx;
-  padding: 15rpx;
-}
-
-.item-type3-top-text {
-  padding-top: 15rpx;
-  font-size: 28rpx;
-  color: #595959;
-}
-
-.item-type3-bottom {
-  background: white;
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  height: 100%;
-}
-
-.item-type3-bottom-image {
-  padding: 25rpx;
-  width: 180rpx;
-  height: 140rpx;
-}
-
-.item-type3-bottom-right {
-  background: white;
-  display: flex;
-  flex-direction: column;
-  width: 70%;
-  height: 100%;
-}
-
-.item-type3-bottom-right-toptext {
-  padding-top: 30rpx;
-  font-size: 30rpx;
-  color: #595959;
-  width: 100%;
-  height: 50rpx;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
-.item-type3-bottom-right-bottomtext {
-  font-size: 24rpx;
-  padding-top: 20rpx;
-  color: #999999;
-  width: 100%;
-  height: 100rpx;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
-.item-type4 {
-  background: white;
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  height: 170rpx;
-}
-
-.item-type4-left-image {
-  padding: 15rpx;
-  width: 50%;
-  height: 140rpx;
-}
-
-.item-type4-right-image {
-  padding: 15rpx;
-  width: 50%;
-  height: 140rpx;
 }
