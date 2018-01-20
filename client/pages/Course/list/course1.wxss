@@ -1,1 +1,3 @@
-/* pages/Course/list/course1.wxss */
+.tc{
+    text-align: center;
+}
