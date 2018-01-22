@@ -18,11 +18,11 @@ Page({
     workbench: [
       {
         url: '../../images/Home/home_wb1.png',
-        title: "home_wb1",
+        title: "./home_wb1/home_wb1",
       },
       {
         url: '../../images/Home/home_wb2.png',
-        title: 'home_wb2',
+        title: '../Course/list/course1',
       },
       {
         url: '../../images/Home/home_wb3.png',
@@ -42,6 +42,6 @@ Page({
   navigateTo: function (event) {
     console.log(event);
     var p = event.currentTarget.id;
-    wx.navigateTo({ url: './' + p + '/' + p });
+    wx.navigateTo({ url: p });
   }
 })
