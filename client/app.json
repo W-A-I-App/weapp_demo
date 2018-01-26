@@ -17,9 +17,9 @@
     "pages/Course/list/course1",
     "pages/Course/list/course2",
     
-    "pages/Message/message",
-    "pages/Message/tools/cpy/cpy",
-    "pages/Message/games/2048/2048"
+    "pages/Magic/magic",
+    "pages/Magic/tools/cpy/cpy",
+    "pages/Magic/games/2048/2048"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -46,7 +46,7 @@
         "text": "课程"
       },
       {
-        "pagePath": "pages/Message/message",
+        "pagePath": "pages/Magic/magic",
         "iconPath": "images/tabbar/交流暗.png",
         "selectedIconPath": "images/tabbar/交流亮.png",
         "text": "交流"
