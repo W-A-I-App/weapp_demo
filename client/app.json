@@ -1,6 +1,6 @@
 {
   "pages": [
-    "pages/Home/Home",
+    "pages/Home/home",
     "pages/Home/autoplay1/autoplay1",
     "pages/Home/autoplay2/autoplay2",
     "pages/Home/autoplay3/autoplay3",
@@ -34,7 +34,7 @@
     "backgroundColor": "#FFFFFF",
     "list": [
       {
-        "pagePath": "pages/Home/Home",
+        "pagePath": "pages/Home/home",
         "iconPath": "images/tabbar/首页暗.png",
         "selectedIconPath": "images/tabbar/首页亮.png",
         "text": "首页"
