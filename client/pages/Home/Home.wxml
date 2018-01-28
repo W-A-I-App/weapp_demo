@@ -14,47 +14,6 @@
              <text>home_wb1</text>
         </view>
     </view>
-   <view class="workbench">
-      <view class="list">
-        <view class="items">
-          <image src="../../images/Home/home_wb1.png" bindtap="navigateTo" id="home_wb1"></image>
-          <text>home_wb1</text>
-        </view>
-        <!--TODO: Add other work tab link -->
-        <view class="items">
-          <image src="../../images/Home/home_wb2.png" bindtap="" id=""></image>
-          <text>home_wb2</text>
-        </view>
-        <view class="items">
-          <image src="../../images/Home/home_wb3.png" bindtap="" id=""></image>
-          <text>home_wb3</text>
-        </view>
-        <view class="items">
-          <image src="../../images/Home/home_wb4.png" bindtap="" id=""></image>
-          <text>home_wb4</text>
-        </view>
-      </view>
-    </view>
-    <view class="workbench">
-      <view class="list">
-        <view class="items">
-          <image src="../../images/Home/home_wb5.png" bindtap="" id=""></image>
-          <text>home_wb5</text>
-        </view>
-        <view class="items">
-          <image src="../../images/Home/home_wb6.png" bindtap="" id=""></image>
-          <text>home_wb6</text>
-        </view>
-        <view class="items">
-          <image src="../../images/Home/home_wb7.png" bindtap="" id=""></image>
-          <text>home_wb7</text>
-        </view>
-        <view class="items">
-          <image src="../../images/Home/home_wb8.png" bindtap="" id=""></image>
-          <text>home_wb8</text>
-        </view>
-      </view>
-    </view>
   </view>
   <view class="line one-img">
         <text class="alone-line-text">精品课程</text>
